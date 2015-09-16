@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+  <title> Angular Project By Dan</title> 
+</head>
+
+<body ng-init="name='parimal Sharad Chandwaskar'">
+    <h2> This is angular Project</h2>
+    <br/>
+    <div ng-hide="isHidden">
+        NAME:
+        <input type="text" ng-model="name" /> {{name}}
+    </div>
+    <br/> HIDE:
+    <input type="checkbox" ng-model="isHidden" />
+    <br/>
+    <br/>
+    <button ng-click="name='JOHN'">Change Name</button>
+    <script src="angular.js"></script>
+    <br/>
+    <div ng-init="people=[{name:'parimal', city:'ohio'}, 
+                  {name:'ketan', city:'nashik'}, 
+                  {name:'rushee', city:'pune'}]">
+        <ul>
+         <li ng-repeat="person in people">{{person.name + ' ' + person.city}}</li>
+        </ul><br/>
+    <table>
+        <tr> 
+            <th>NAME</th>
+            <th>CITY</th>
+        </tr> 
+        
+        <tr ng-repeat="person in people" >
+            <td>{{person.name}}</td>
+            <td>{{person.city}}</td>
+        </tr>
+    </table>    
+        
+        
+    </div>
+    
+</body>
+
+</html>
